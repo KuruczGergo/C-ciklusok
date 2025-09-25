@@ -1,0 +1,7 @@
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\bin\Debug\Ciklusok2.exe.config
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\bin\Debug\Ciklusok2.exe
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\bin\Debug\Ciklusok2.pdb
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\obj\Debug\Ciklusok2.csproj.AssemblyReference.cache
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\obj\Debug\Ciklusok2.csproj.CoreCompileInputs.cache
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\obj\Debug\Ciklusok2.exe
+C:\Users\kuruczg\source\repos\Ciklusok2\Ciklusok2\obj\Debug\Ciklusok2.pdb
