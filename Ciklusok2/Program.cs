@@ -215,37 +215,61 @@ namespace Ciklusok2
             Console.WriteLine("Visszafelé: " + visszafele);
 
 
+            Console.WriteLine("------------------------------------------------------");
+            //Feladat 9
 
+            List<int> szamok4 = new List<int>();
+            int db = 0;
+            for (int i = 1; i <= 10; i++)
+            {
+                for (int j = 1; j <= 10; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        db++;
+                    }
+                }
+                if (db <= 2)
+                {
+                    szamok4.Add(i);
+                }
+                db = 0;
+            }
+            foreach (var item in szamok4)
+            {
+                Console.WriteLine(item);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            //🥒🙂
-
-
-
+            }
+            Console.WriteLine($"{szamok4.Count} prím szám van.");
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //🥒🙂
+
+
+
+    }
     }
 }
