@@ -12,17 +12,17 @@ namespace Ciklusok2
         static void Main(string[] args)
         {
 
-        //1 feladat
+            //1 feladat
 
             Console.Write("Kérem az első számot: ");
             int szam1 = int.Parse(Console.ReadLine());
             Console.Write("Kérem a második számot: " +
                 "");
             int szam2 = int.Parse(Console.ReadLine());
-            
+
             if (szam1 < szam2)
             {
-                Console.WriteLine($"A nagyobbik szám a {szam2} és a különbség {szam2-szam1}");
+                Console.WriteLine($"A nagyobbik szám a {szam2} és a különbség {szam2 - szam1}");
             }
             else if (szam1 > szam2)
             {
@@ -77,7 +77,7 @@ namespace Ciklusok2
 
             if (szamok.Count > 0)
                 Console.WriteLine($"A legtöbbször megadott szám: {maxSzam} ({maxDb} alkalommal)");
-            
+
             Console.WriteLine("-----------------------------------------------------");
             //Feladat 3
 
@@ -85,7 +85,7 @@ namespace Ciklusok2
             int paros = 0, paratlan = 0;
             for (int i = 0; i < 10; i++)
             {
-                Console.Write($"Kérem a {i+1} számot: ");
+                Console.Write($"Kérem a {i + 1} számot: ");
                 int szam3 = int.Parse(Console.ReadLine());
                 szamok2.Add(szam3);
                 if (szam3 % 2 == 0) paros++;
@@ -196,14 +196,14 @@ namespace Ciklusok2
                 jelszo2 = Console.ReadLine();
 
                 if (jelszo1 == jelszo2)
-                    {
+                {
                     Console.WriteLine("Tovább léphetsz");
                     break;
-                    }
+                }
                 else
-                    {
+                {
                     Console.WriteLine("Próbáld újra");
-                    }
+                }
             }
             Console.Write("Adj meg bármilyen szöveget: ");
             string szoveg = Console.ReadLine();
@@ -219,21 +219,21 @@ namespace Ciklusok2
             //Feladat 9
 
             List<int> szamok4 = new List<int>();
-            int db = 0;
+            int db5 = 0;
             for (int i = 1; i <= 10; i++)
             {
                 for (int j = 1; j <= 10; j++)
                 {
                     if (i % j == 0)
                     {
-                        db++;
+                        db5++;
                     }
                 }
-                if (db <= 2)
+                if (db5 <= 2)
                 {
                     szamok4.Add(i);
                 }
-                db = 0;
+                db5 = 0;
             }
             foreach (var item in szamok4)
             {
@@ -241,35 +241,98 @@ namespace Ciklusok2
 
             }
             Console.WriteLine($"{szamok4.Count} prím szám van.");
+
+
+            Console.WriteLine("------------------------------------------------------");
+            //Feladat 10
+
+
+           
+
+                Random random = new Random();
+                int playerPont = 0, gepPont = 0;
+
+                for (int kor = 1; kor <= 5; kor++)
+                {
+                    string player = "";
+                    string computer = "";
+
+                    while (player != "KŐ" && player != "PAPÍR" && player != "OLLÓ")
+                    {
+                        Console.Write($"Kérem a választását (kő, papír, olló) - {kor}. kör: ");
+                        player = Console.ReadLine().ToUpper();
+                    }
+
+                    switch (random.Next(1, 4))
+                    {
+                        case 1:
+                            computer = "KŐ";
+                            break;
+                        case 2:
+                            computer = "PAPÍR";
+                            break;
+                        case 3:
+                            computer = "OLLÓ";
+                            break;
+                    }
+
+                    Console.WriteLine($"A játékos választása: {player}");
+                    Console.WriteLine($"A gép választása: {computer}");
+
+                    if (player == computer)
+                    {
+                        Console.WriteLine("Döntetlen!");
+                    }
+                    else if ((player == "KŐ" && computer == "OLLÓ") ||
+                             (player == "PAPÍR" && computer == "KŐ") ||
+                             (player == "OLLÓ" && computer == "PAPÍR"))
+                    {
+                        Console.WriteLine("A játékos nyert!");
+                        playerPont++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("A gép nyert!");
+                        gepPont++;
+                    }
+
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine($"Végső eredmény: Játékos {playerPont} - Gép {gepPont}");
+
+                if (playerPont > gepPont)
+                    Console.WriteLine("Gratulálok, nyertél!");
+                else if (playerPont < gepPont)
+                    Console.WriteLine("Sajnos a gép nyert.");
+                else
+                    Console.WriteLine("Döntetlen lett a játék.");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        //🥒🙂
-
-
-
     }
-    }
-}
+
