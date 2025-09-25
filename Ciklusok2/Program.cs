@@ -151,6 +151,21 @@ namespace Ciklusok2
                 Console.WriteLine("Nem adott meg osztályzatot.");
             Console.WriteLine($"1-es: {egyes}, 2-es: {kettes}, 3-as: {harmas}, 4-es: {negyes}, 5-ös: {otos}");
 
+            Console.WriteLine("------------------------------------------------------");
+            //Feladat 6
+
+            Console.Write("Adj meg egy számot (1–10): ");
+            int szam7 = int.Parse(Console.ReadLine());
+            Console.WriteLine($"{szam7} szorzótáblája (csak a 3-mal osztható eredmények):");
+
+            for (int i = 1; i <= 10; i++)
+            {
+                int eredmeny = szam7 * i;
+                if (eredmeny % 3 == 0)
+                {
+                    Console.WriteLine($"{szam7} x {i} = {eredmeny}");
+                }
+            }
 
 
 
