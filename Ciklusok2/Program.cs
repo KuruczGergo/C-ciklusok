@@ -167,7 +167,20 @@ namespace Ciklusok2
                 }
             }
 
+            Console.WriteLine("------------------------------------------------------");
+            //Feladat 7
 
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.Write($"Kérek egy számot ({i}/10): ");
+                int szam8 = int.Parse(Console.ReadLine());
+
+                string elojel = szam8 >= 0 ? "pozitív" : "negatív";
+                string paritas = szam8 % 2 == 0 ? "páros" : "páratlan";
+                string oszthato3 = szam8 % 3 == 0 ? "osztható 3-mal" : "nem osztható 3-mal";
+
+                Console.WriteLine($"{szam8}: {elojel}, {paritas}, {oszthato3}\n");
+            }
 
 
 
