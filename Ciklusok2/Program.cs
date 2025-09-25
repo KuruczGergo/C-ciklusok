@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -80,8 +81,6 @@ namespace Ciklusok2
             Console.WriteLine("-----------------------------------------------------");
             //Feladat 3
 
-            
-
             List<int> szamok2 = new List<int>();
             int paros = 0, paratlan = 0;
             for (int i = 0; i < 10; i++)
@@ -95,7 +94,24 @@ namespace Ciklusok2
             Console.WriteLine($"Páros számok: {paros}, Páratlan számok: {paratlan}");
 
 
+            Console.WriteLine("------------------------------------------------------");
+            //Feladat 4
 
+
+
+            Console.Write("Kérek egy szót ");
+            string szo = Console.ReadLine();
+            int darabszo = 0;
+            while (szo != "vége")
+            {
+                Console.Write("Kérek egy szót ");
+                szo = Console.ReadLine();
+                if (szo.Length > 5)
+                {
+                    darabszo++;
+                }
+            }
+            Console.WriteLine($"Összesen {darabszo} db 5 karakternél hosszabb szót adott meg.");
 
 
 
