@@ -114,7 +114,42 @@ namespace Ciklusok2
             Console.WriteLine($"Összesen {darabszo} db 5 karakternél hosszabb szót adott meg.");
 
 
+            Console.WriteLine("------------------------------------------------------");
+            //Feladat 5
 
+            int osszeg = 0;
+            int darab = 0;
+            int egyes = 0;
+            int kettes = 0;
+            int harmas = 0;
+            int negyes = 0;
+            int otos = 0;
+
+            Console.Write("Osztályzat (1-5, -1 vége): ");
+            int jegy = int.Parse(Console.ReadLine());
+
+            while (jegy != -1)
+            {
+                if (jegy >= 1 && jegy <= 5)
+                {
+                    osszeg += jegy;
+                    darab++;
+                    if (jegy == 1) egyes++;
+                    else if (jegy == 2) kettes++;
+                    else if (jegy == 3) harmas++;
+                    else if (jegy == 4) negyes++;
+                    else otos++;
+                }
+
+                Console.Write("Osztályzat (1-5, -1 vége): ");
+                jegy = int.Parse(Console.ReadLine());
+            }
+
+            if (darab > 0)
+                Console.WriteLine($"Átlag: {(double)osszeg / darab:F2}");
+            else
+                Console.WriteLine("Nem adott meg osztályzatot.");
+            Console.WriteLine($"1-es: {egyes}, 2-es: {kettes}, 3-as: {harmas}, 4-es: {negyes}, 5-ös: {otos}");
 
 
 
